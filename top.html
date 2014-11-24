@@ -1,0 +1,33 @@
+<html>
+
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>画像の品質に関するアンケート</title>
+ </head>
+
+ <body>
+ 	表示される画像の品質を評価して頂きます。表示画像に合成感（違和感）が<br>
+ 	<h4>ない　かすかにある　ある　明らかにある　非常にある</h4>
+ 	の五段階評価となります。<br>
+ 	<br>
+ 	サンプル画像<br>
+ 	<img src="./img/5-00000.jpg" alt="サンプル" width="300">
+ 	<img src="./img/5-23313.jpg" alt="サンプル" width="300"><br>
+	<br>
+	<form method="post" action="questionnaire.php">
+ 		<input type="radio" name="sex" value="男" checked> 男
+		<input type="radio" name="sex" value="女"> 女<br>
+
+		<input type="radio" name="age" value="0" checked> 9歳以下
+		<input type="radio" name="age" value="10"> 10〜15歳
+		<input type="radio" name="age" value="15"> 15〜19歳
+		<input type="radio" name="age" value="20"> 20〜24歳
+		<input type="radio" name="age" value="25"> 25〜30歳
+		<input type="radio" name="age" value="30"> 30〜40歳
+		<input type="radio" name="age" value="40"> 40歳以上<br>
+
+		<input type="submit" value="アンケートへ">
+	</form>
+ </body>
+
+</html>
