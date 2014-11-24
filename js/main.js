@@ -167,7 +167,7 @@ window.onload = function(){
             var inp03 = document.createElement("input");
             inp03.type = "hidden";
             inp03.name = "answer_" + i + "[]";
-            inp03.value = nowImgWH[i][0]+","+nowImgWH[i][1];
+            inp03.value = nowImgWH[i][0]+":"+nowImgWH[i][1];
             f.appendChild(inp03);
         }
         

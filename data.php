@@ -21,6 +21,26 @@
 ?>
 
 です。
+
+<?php
+
+	$fp = fopen("sample.csv", "a");
+	
+	 for($i = 0; $i<intval($_POST["question_num"]); $i++){
+        $name = "answer_".$i;
+        fwrite($fp, $_POST[$name][0] .",".
+        	$_POST[$name][1] .",".
+        	$_POST[$name][2] .",".
+        	$_POST["sex"] .",".
+        	$_POST["age"] .",".
+        	"\n");
+        }
+        
+       // echo $_POST[$name][0] . "（".$_POST[$name][2] . "）：" . $_POST[$name][1] . "点 <br />";
+	
+	fclose($fp);
+
+?>
  
   
  </body>
