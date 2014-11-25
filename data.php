@@ -5,7 +5,7 @@
 <title>アンケート</title>
 </head>
 <body>
-受け取ったデータは<br /><br />
+<!--受け取ったデータは<br /><br />
 <?php echo $_POST["question_num"]?>項目<br />
 性別：<?php echo $_POST["sex"]?><br />
 年齢層：<?php echo $_POST["age"]?><br />
@@ -20,11 +20,16 @@
 
 ?>
 
-です。
+です。-->
+<br>
+<br>
+<h4>アンケートは全て終了いたしました。
+<br>
+ご協力ありがとうございました。</h4>
 
 <?php
 
-	$fp = fopen("sample.csv", "a");
+	$fp = fopen("data.csv", "a");
 	
 	 for($i = 0; $i<intval($_POST["question_num"]); $i++){
         $name = "answer_".$i;
