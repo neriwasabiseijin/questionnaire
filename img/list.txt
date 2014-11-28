@@ -1,0 +1,36 @@
+仮想試着の実験画像	2014/11/25 金森
+
+gray_knit_original.jpg		ZOZO からダウンロードした元画像
+gray_knit_blur1.jpg		服以外にガウスぼかし (半径1) を適用
+gray_knit_blur2.jpg		服以外にガウスぼかし (半径2) を適用
+gray_knit_blur3.jpg		服以外にガウスぼかし (半径3) を適用
+
+red_black_checker_original.jpg	ZOZO からダウンロードした元画像
+red_black_checker_blur1.jpg	服以外にガウスぼかし (半径1) を適用
+red_black_checker_blur2.jpg	服以外にガウスぼかし (半径2) を適用
+red_black_checker_blur3.jpg	服以外にガウスぼかし (半径3) を適用
+
+hotel_shirt_original.jpg	ホテルの部屋で撮影した衣服の元画像
+hotel_shirt_synthesized.jpg	同じホテルの部屋で撮影した人物に衣服を合成
+
+pajama_leftlight_cybershot_original.jpg		左から光を当てCybershotで撮影した元画像
+pajama_leftlight_cybershot_synthesized.jpg	右から光を当てた人物に衣服画像を合成
+pajama_leftlight_iphone5s_original.jpg		左から光を当てiPhone5sで撮影した元画像
+pajama_leftlight_iphone5s_synthesized.jpg	右から光を当てた人物に衣服画像を合成
+pajama_bathroom_cybershot_garment.jpg	Cybershotで撮影した衣服を浴室で撮影した人物に合成
+pajama_bathroom_iphone5s_garment.jpg	iPhone5sで撮影した衣服を浴室で撮影した人物に合成
+pajama_cybershot_customer_iphone5s_garment.jpg	人物をCybershotで衣服をiPhone5sで撮影し合成
+pajama_iphone5s_customer_cybershot_garment.jpg	人物をiPhone5sで衣服をCybershotで撮影し合成
+
+projector_beige_shirt_original.jpg	プロジェクタで照らしたベージュのシャツの元画像
+projector_beige_shirt_bathroom.jpg	ベージュのシャツを浴室の人物に合成
+projector_beige_shirt_livingroom.jpg	ベージュのシャツをリビングの人物に合成
+projector_blazer_original.jpg		プロジェクタで照らしたブレザーの元画像
+projector_blazer_bathroom.jpg		ブレザーを浴室の人物に合成
+projector_blazer_livingroom.jpg		ブレザーをリビングの人物に合成
+projector_red_sweater_original.jpg	プロジェクタで照らした赤いセーターの元画像
+projector_red_sweater_bathroom.jpg	赤いセーターを浴室の人物に合成
+projector_red_sweater_livingroom.jpg	赤いセーターをリビングの人物に合成
+projector_white_shirt_original.jpg	プロジェクタで照らした白いシャツの元画像
+projector_white_shirt_bathroom.jpg	白いシャツを浴室の人物に合成
+projector_white_shirt_livingroom.jpg	白いシャツをリビングの人物に合成

@@ -2,13 +2,15 @@
 <html lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>アンケート</title>
+<title>画像の品質に関するアンケート</title>
 </head>
 <body>
 <!--受け取ったデータは<br /><br />
+
 <?php echo $_POST["question_num"]?>項目<br />
 性別：<?php echo $_POST["sex"]?><br />
 年齢層：<?php echo $_POST["age"]?><br />
+所用時間：<?php echo $_POST["time"]?><br />
 
 問題<br />
 <?php 
@@ -16,7 +18,6 @@
         $name = "answer_".$i;
         echo $_POST[$name][0] . "（".$_POST[$name][2] . "）：" . $_POST[$name][1] . "点 <br />";
     }
-
 
 ?>
 
@@ -29,19 +30,25 @@
 
 <?php
 
-	$fp = fopen("data.csv", "a");
+	$fp = fopen("data_".date("md").".csv", "a");
+	//$fp = fopen("aa.csv", "a");
 	
 	 for($i = 0; $i<intval($_POST["question_num"]); $i++){
         $name = "answer_".$i;
         fwrite($fp, $_POST[$name][0] .",".
         	$_POST[$name][1] .",".
+        	",".
+        	$_POST["time"] .",".
         	$_POST[$name][2] .",".
+        	",".
+        	$_SERVER["REMOTE_ADDR"] .",".
         	$_POST["sex"] .",".
         	$_POST["age"] .",".
+			$_SERVER["HTTP_USER_AGENT"] .",".
+			
+
         	"\n");
         }
-        
-       // echo $_POST[$name][0] . "（".$_POST[$name][2] . "）：" . $_POST[$name][1] . "点 <br />";
 	
 	fclose($fp);
 

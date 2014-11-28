@@ -1,6 +1,5 @@
 window.onload = function(){
-    
-    //window_load();
+
     var objectNum = 0; // 読み込む画像の数
     var objectLoadedCount = 0; // 読み込まれた画像の数
     
@@ -16,6 +15,7 @@ window.onload = function(){
     var randImgNums = new Array();
     var showImageNum = 0;
     var pushedButtonValues = new Array();
+    var bufTime = 0;	//開始時間
     
     var sex,age;
     var nowImgWH = new Array();
@@ -54,6 +54,10 @@ window.onload = function(){
         button_05.addEventListener("click", function(e){ClickEvaluationButton(e,5)});      
 
         console.log(randImgNums);
+        
+        bufTime = time_t();
+        console.log(bufTime);
+        
         ShowImage();
     }
 
@@ -176,6 +180,20 @@ window.onload = function(){
         
         var inp_age = document.getElementById("age");
         f.appendChild(inp_age);
+        
+        var inp_qnum = document.createElement("input");
+        inp_qnum.type = "hidden";
+        inp_qnum.name = "question_num";
+        inp_qnum.value = pushedButtonValues.length;
+        f.appendChild(inp_qnum);
+        
+        var inp_time = document.createElement("input");
+        inp_qnum.type = "hidden";
+        inp_qnum.name = "time";
+        inp_qnum.value = time_t() - bufTime;
+        f.appendChild(inp_time);
+        
+        console.log(time_t() - bufTime);
 
         //document.getElementById("myQuestion").appendChild(f);
         f.submit();
@@ -204,5 +222,10 @@ window.onload = function(){
             arr[r] = tmp;
         }
     }
+    
+    //UNIX TIME
+    function time_t(){
+    return new Date/1000|0;
+	}
 
 }
