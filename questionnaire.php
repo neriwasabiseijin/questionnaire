@@ -14,7 +14,7 @@
    <input type="hidden" id="age" name="age" value='<?php echo $_POST["age"] ?>' />
    -->
     <div id="mondai">
-        <div style="font-size:large;">問題数<span id="questionNum">（1/20）
+        <div style="font-size:large;">問題数<span id="questionNum">（1/20）<br>
         画像の初回読み込みに少々時間がかかります。このページのままお待ち下さい。
         </span></div>
         <div style="font-size:medium;">合成感（違和感）が</div>
