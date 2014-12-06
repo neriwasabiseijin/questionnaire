@@ -5,18 +5,12 @@
 <title>画像の品質に関するアンケート</title>
 </head>
 <body>
-受け取ったデータは<br /><br />
-<!--
+<!--受け取ったデータは<br /><br />
+
 <?php echo $_POST["question_num"]?>項目<br />
 性別：<?php echo $_POST["sex"]?><br />
 年齢層：<?php echo $_POST["age"]?><br />
-所用時間：<?php echo $_POST["terminal"]?><br />
 所用時間：<?php echo $_POST["time"]?><br />
-所用時間：<?php echo $_POST["time"]?><br />
-所用時間：<?php echo $_POST["time"]?><br />
-所用時間：<?php echo $_POST["time"]?><br />
-所用時間：<?php echo $_POST["time"]?><br />
-
 
 問題<br />
 <?php 
@@ -36,23 +30,17 @@
 
 <?php
 
-	$fp = fopen("data_".date("md").".csv", "a");
+	$fp = fopen("testdata_".date("md").".csv", "a");
 	//$fp = fopen("aa.csv", "a");
 	
 	 for($i = 0; $i<intval($_POST["question_num"]); $i++){
         $name = "answer_".$i;
         fwrite($fp, $_POST[$name][0] .",".
         	$_POST[$name][1] .",".
-        	",".
         	$_POST["time"] .",".
+        	$_POST["question_num"] .",".
         	$_POST[$name][2] .",".
-        	",".
         	$_SERVER["REMOTE_ADDR"] .",".
-        	$_POST["sex"] .",".
-        	$_POST["age"] .",".
-			$_SERVER["HTTP_USER_AGENT"] .",".
-			
-
         	"\n");
         }
 	
