@@ -5,12 +5,18 @@
 <title>画像の品質に関するアンケート</title>
 </head>
 <body>
-<!--受け取ったデータは<br /><br />
-
+受け取ったデータは<br /><br />
+<!--
 <?php echo $_POST["question_num"]?>項目<br />
 性別：<?php echo $_POST["sex"]?><br />
 年齢層：<?php echo $_POST["age"]?><br />
+所用時間：<?php echo $_POST["terminal"]?><br />
 所用時間：<?php echo $_POST["time"]?><br />
+所用時間：<?php echo $_POST["time"]?><br />
+所用時間：<?php echo $_POST["time"]?><br />
+所用時間：<?php echo $_POST["time"]?><br />
+所用時間：<?php echo $_POST["time"]?><br />
+
 
 問題<br />
 <?php 
@@ -24,7 +30,7 @@
 です。-->
 <br>
 <br>
-<h4>アンケートは全て終了いたしました。
+<h4>アンケートは終了いたしました。
 <br>
 ご協力ありがとうございました。</h4>
 

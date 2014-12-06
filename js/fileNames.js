@@ -1,5 +1,5 @@
 //問題数
-const QUESTION_NUM = 20;
+const QUESTION_NUM = 100;
 
 //画像ファイル名
 var imgFilename = [

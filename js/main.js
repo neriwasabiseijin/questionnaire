@@ -16,6 +16,7 @@ window.onload = function(){
     var showImageNum = 0;
     var pushedButtonValues = new Array();
     var bufTime = 0;	//開始時間
+    var t=20;
     
     var sex,age;
     var nowImgWH = new Array();
@@ -69,7 +70,8 @@ window.onload = function(){
         imageBox.appendChild(show_img);
         show_img.id ="myImg";
         parWH = show_img.width/show_img.height;
-        document.getElementById("questionNum").innerHTML = "（"+(showImageNum+1)+"/"+QUESTION_NUM+"）";
+        /*document.getElementById("questionNum").innerHTML = "（"+(showImageNum+1)+"/"+QUESTION_NUM+"）";*/
+        document.getElementById("questionNum").innerHTML = "（"+(showImageNum+1)+"/"+t+"）";
 
         imgSizeChange();
 
@@ -91,8 +93,6 @@ window.onload = function(){
 	}
     
     function imgSizeChange(){
-        //sW = window.innerWidth;
-		//sH = window.innerHeight;
 		var img = document.getElementById("myImg");
         var imgBox = document.getElementById("imageBox");
         
@@ -115,15 +115,28 @@ window.onload = function(){
         //console.log(pushedButtonValues);
         
         showImageNum++;
-        if(showImageNum < QUESTION_NUM && showImageNum < myImgs.length){
-            ShowImage();
+        if(showImageNum==100){
+        	Finish();
+        }else if(showImageNum%20==0){
+        	myEnter();
         }else{
-            var buttons = document.getElementById("buttons");
-            buttons.innerHTML = "";
-            //console.log(nowImgWH)
-            Finish();
+        	ShowImage();
         }
     }
+    
+    //続けるかどうかの確認
+    function myEnter(){
+     myRet = confirm("さらに20枚評価していただけますか？¥n最大で100枚となり、20枚ごとに終了することが可能です。");
+     if ( myRet == true ){
+     	t+=20;
+         ShowImage();
+     }else{
+   	  	var buttons = document.getElementById("buttons");
+         buttons.innerHTML = "";
+         Finish();
+     }
+}
+    
     
     // アンケート終了後の処理
     function Finish(){
@@ -175,16 +188,16 @@ window.onload = function(){
             f.appendChild(inp03);
         }
         
-        var inp_sex = document.getElementById("sex");
+     /*   var inp_sex = document.getElementById("sex");
         f.appendChild(inp_sex);
         
         var inp_age = document.getElementById("age");
-        f.appendChild(inp_age);
+        f.appendChild(inp_age);*/
         
         var inp_qnum = document.createElement("input");
         inp_qnum.type = "hidden";
         inp_qnum.name = "question_num";
-        inp_qnum.value = pushedButtonValues.length;
+        inp_qnum.value = t;
         f.appendChild(inp_qnum);
         
         var inp_time = document.createElement("input");

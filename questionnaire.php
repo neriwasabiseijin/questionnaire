@@ -9,12 +9,14 @@
 
 <body id="myBody" style="overflow:hidden;">
    <!-- <h1>アンケート</h1>-->   
-   
+   <!--
    <input type="hidden" id="sex" name="sex" value='<?php echo $_POST["sex"] ?>' />
    <input type="hidden" id="age" name="age" value='<?php echo $_POST["age"] ?>' />
-   
+   -->
     <div id="mondai">
-        <div style="font-size:large;">問題数<span id="questionNum">（1/10）</span></div>
+        <div style="font-size:large;">問題数<span id="questionNum">（1/20）
+        画像の初回読み込みに少々時間がかかります。このページのままお待ち下さい。
+        </span></div>
         <div style="font-size:medium;">合成感（違和感）が</div>
     </div>
     <div id="myQuestion" style="visibility:hidden;">
